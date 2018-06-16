@@ -3,6 +3,16 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 const keys = require('../secret_keys');
 
+const User = require('../models/User');
+
+passport.serializeUser(function(user, done) {
+    done(null, user);
+});
+
+passport.deserializeUser(function(obj, done) {
+    done(null, obj);
+});
+
 passport.use(
     new GoogleStrategy(
         {
@@ -10,10 +20,11 @@ passport.use(
             clientSecret: keys.googleClientSecret,
             callbackURL: '/auth/google/callback'
         },
-        (accessToken, refreshToken, profile, done) => {
-            console.log('access token:', accessToken);
-            console.log('refresh token:', refreshToken);
-            console.log('profile:', profile);
+        async (accessToken, refreshToken, profile, done) => {
+            const user = await User.find_or_create_from_google(profile);
+            console.log(user);
+
+            return done(null, user);
         }
     )
 );
