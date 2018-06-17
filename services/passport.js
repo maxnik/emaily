@@ -1,7 +1,7 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
-const keys = require('../secret_keys');
+const keys = require('./secret_keys');
 
 const User = require('../models/User');
 
@@ -22,7 +22,6 @@ passport.use(
         },
         async (accessToken, refreshToken, profile, done) => {
             const user = await User.find_or_create_from_google(profile);
-            console.log(user);
 
             return done(null, user);
         }
