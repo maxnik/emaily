@@ -15,7 +15,7 @@ module.exports = app => {
         passport.authenticate('google', { failureRedirect: '/login' }),
         (req, res) => {
             res.cookie('auth_token', req.user.auth_token, { httpOnly: false });
-            res.redirect('/login');
+            res.redirect('/login/google');
         }
     );
 };
