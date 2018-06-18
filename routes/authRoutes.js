@@ -14,11 +14,7 @@ module.exports = app => {
         '/auth/google/callback',
         passport.authenticate('google', { failureRedirect: '/login' }),
         (req, res) => {
-            const user = req.user;
-            res.json({
-                auth_token: user.auth_token,
-                email: user.email || user.google_email
-            });
+            res.redirect(`/dashboard/${req.user.auth_token}`);
         }
     );
 };
