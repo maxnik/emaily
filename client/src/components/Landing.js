@@ -3,8 +3,50 @@ import React from 'react';
 class Landing extends React.Component {
     render() {
         return (
-            <div>
-                <h2>Landing</h2>
+            <div class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="box">Some Callout Text</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="box">Some Callout Text</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="box">Some Callout Text</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="box">Some Callout Text</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="box">Some Callout Text</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="box">Some Callout Text</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="box">Some Callout Text</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="box">Some Callout Text</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="box">Some Callout Text</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }

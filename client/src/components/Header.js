@@ -7,7 +7,7 @@ class Header extends React.Component {
         // localStorage.removeItem('auth_token');
 
         return (
-            <header class="menu">
+            <header class="menu section">
                 <div class="container">
                     <div class="header-top">
                         <Link to="/">
