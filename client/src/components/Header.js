@@ -3,16 +3,28 @@ import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
     render() {
-        const auth_token = localStorage.getItem('auth_token');
+        // const auth_token = localStorage.getItem('auth_token');
         // localStorage.removeItem('auth_token');
 
         return (
-            <div>
-                <Link to="/">
-                    <h2>Header</h2>
-                </Link>
-                <h3>{auth_token}</h3>
-            </div>
+            <header class="menu">
+                <div class="container">
+                    <div class="header-top">
+                        <Link to="/">
+                            <h1>Emaily</h1>
+                        </Link>
+
+                        <Link to="/login">Login</Link>
+                    </div>
+
+                    <nav>
+                        <a href="#">Sets</a>
+                        <a href="#">Practice</a>
+                        <a href="#">Recent</a>
+                        <a href="#">Help</a>
+                    </nav>
+                </div>
+            </header>
         );
     }
 }
