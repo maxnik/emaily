@@ -3,6 +3,7 @@ This sample project is based on the course [Node with React: Fullstack Web Devel
 The differences are:
 
 -   PostgreSQL and knex are used instead of MongoDB;
--   The authentication is token-based and not cookie-based.
+-   The authentication is token-based and not cookie-based;
+-   The front-end part doesn't use Redux.
 
 Styling ideas are taken from the course [Modern CSS for Backend Developers](https://laracasts.com/series/modern-css-for-backend-developers) from Laracasts.
