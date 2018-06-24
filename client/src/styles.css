@@ -17,7 +17,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+header a:hover {
     color: white;
 }
 
@@ -86,4 +86,75 @@ nav > a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    display: flex;
+    border-radius: 10px;
+}
+
+.card-aside {
+    background: linear-gradient(to bottom, #21c8f6, #637bff);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.card-skill {
+    background: rgba(0, 0, 0, 0.4);
+    color: inherit;
+    border: none;
+    border-radius: 9999px;
+    font-size: 0.7em;
+    padding: 3px 25px;
+}
+
+.card-difficulty {
+    font-size: 0.8em;
+}
+
+.card-aside,
+.card-primary {
+    padding: 20px;
+}
+
+.card-primary {
+    color: #888;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    color: #222;
+    font-size: 1.7em;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card-excerpt {
+    flex: 1;
+}
+
+.card-meta {
+    font-size: 0.8em;
+    display: flex;
+}
+
+.card-meta > div {
+    display: flex;
+    align-items: center;
+}
+
+.card-meta > div > svg {
+    margin-right: 5px;
+}
+
+.card-meta > div:first-child {
+    margin-right: 2em;
 }
